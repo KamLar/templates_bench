@@ -1,0 +1,13 @@
+{{if (ne .Foo.Values.Var1 .Foo.Values.Var2)}}
+    var1 is not equal var2
+    {{if (gt .Foo.Values.Var1 .Foo.Values.Var2)}}
+        and var 1 is greater than var2
+    {{else}}
+        var2 is greater than var1
+    {{end}}
+
+{{else}}
+    var1 is equal to var2
+{{end}}
+
+{{range .Foo.Values.Values}}{{.}}{{end}}
